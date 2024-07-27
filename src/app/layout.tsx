@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Lexend_Mega } from "next/font/google";
 import { ThemeProvider } from 'next-themes'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const lexendMega = Lexend_Mega({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
         {/* <ThemeProvider attribute="class"> */}
         {children}
         {/* </ThemeProvider> */}
+        <SpeedInsights />
       </body>
     </html>
   );
